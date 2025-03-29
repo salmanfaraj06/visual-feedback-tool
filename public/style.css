@@ -1,0 +1,160 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    color: #555;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#backButton {
+    background-color: #6c757d;
+    margin-bottom: 15px;
+}
+
+#backButton:hover {
+    background-color: #5a6268;
+}
+
+input[type="file"] {
+    margin-right: 10px;
+}
+
+#uploadForm {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#imageList, #comments {
+    list-style: none;
+    padding: 0;
+}
+
+#imageList li, #comments li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#imageList li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+#imageList li span {
+    font-size: 0.8em;
+    color: #666;
+    display: block;
+}
+
+#feedbackView {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#imageContainer {
+    position: relative; /* Needed for absolute positioning of markers */
+    margin-bottom: 20px;
+    max-width: 100%; /* Ensure container doesn't overflow */
+    border: 1px solid #ccc;
+    cursor: crosshair; /* Indicate clickable area */
+}
+
+#feedbackImage {
+    display: block; /* Remove extra space below image */
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+}
+
+.comment-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.7); /* Red, semi-transparent */
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    transform: translate(-50%, -50%); /* Center the marker on the click point */
+    z-index: 10;
+}
+
+.comment-marker.pending {
+    background-color: rgba(0, 0, 255, 0.7); /* Blue for pending comment */
+}
+
+#commentList {
+    margin-top: 20px;
+}
+
+#comments li {
+    border-left: 5px solid #007bff;
+}
+
+#comments li strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#comments li span {
+    font-size: 0.8em;
+    color: #888;
+}
+
+#commentForm {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    background-color: #f9f9f9;
+}
+
+#commentForm textarea {
+    width: calc(100% - 22px); /* Adjust for padding/border */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#commentMessage, #uploadMessage {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}

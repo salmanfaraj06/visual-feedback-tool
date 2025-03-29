@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Feedback Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Visual Feedback Tool</h1>
+
+    <!-- View for uploading and listing images -->
+    <div id="listView">
+        <h2>Upload New Image</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="imageFile" name="imageFile" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+        <p id="uploadMessage"></p>
+
+        <h2>Uploaded Images</h2>
+        <ul id="imageList">
+            <!-- Image list will be populated by JS -->
+            <li>Loading...</li>
+        </ul>
+    </div>
+
+    <!-- View for displaying a single image and its comments -->
+    <div id="feedbackView" style="display: none;">
+        <button id="backButton">&larr; Back to List</button>
+        <h2 id="imageTitle">Image Feedback</h2>
+        <div id="imageContainer">
+            <img id="feedbackImage" src="" alt="Feedback Image">
+            <!-- Comments will be overlaid here by JS -->
+        </div>
+        <div id="commentList">
+            <h3>Comments</h3>
+            <ul id="comments">
+                <!-- Comments will be populated by JS -->
+            </ul>
+        </div>
+        <div id="commentForm" style="display: none;">
+             <h4>Add Comment at Marker</h4>
+             <textarea id="commentText" rows="3" placeholder="Enter your feedback..."></textarea>
+             <button id="submitComment">Submit Comment</button>
+             <button id="cancelComment">Cancel</button>
+             <p id="commentMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
